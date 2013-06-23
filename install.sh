@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 # install.sh - install simple-ducky
 
 
@@ -7,7 +7,7 @@ if [ "${UID}" != "0" ]; then
 	exit 1
 else
 	if ! [ -a /usr/share/simple-ducky/simple-ducky.sh ] && ! [ -a /usr/share/simple-ducky/update.sh ]; then
-		git clone --recursive git@github.com:gitbrew/simple-ducky.git /usr/share/simple-ducky
+		git clone --recursive https://github.com/gitbrew/simple-ducky.git /usr/share/simple-ducky
 	fi
 	ln -sf /usr/share/simple-ducky/simple-ducky.sh /usr/bin/simple-ducky
 	ln -sf /usr/share/simple-ducky/update.sh /usr/bin/simple-ducky-update
