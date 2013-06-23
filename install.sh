@@ -9,7 +9,7 @@ else
 	if ! [ -a /usr/share/simple-ducky/simple-ducky.sh ] && ! [ -a /usr/share/simple-ducky/update.sh ]; then
 		git clone --recursive https://github.com/gitbrew/simple-ducky.git /usr/share/simple-ducky
 	fi
-	ln -sf /usr/share/simple-ducky/misc/dbd-conf /usr/share/simple-ducky/misc/dbd/conf
+	ln -sf /usr/share/simple-ducky/misc/dbd-conf/* /usr/share/simple-ducky/misc/dbd/conf/
 	ln -sf /usr/share/simple-ducky/simple-ducky.sh /usr/bin/simple-ducky
 	ln -sf /usr/share/simple-ducky/update.sh /usr/bin/simple-ducky-update
 fi
