@@ -2,6 +2,7 @@
 #update.sh - update simple-ducky and all submodules
 
 #update simple-ducky
+cd /usr/share/simple-ducky
 git pull
 
 # Update submodules
