@@ -19,7 +19,7 @@ Note: The newest version supports all Debian distro's i.e. Kali, Backtrack, Ubun
 To install the Simple-Ducky on any Debian distro:
 
  - git clone --recursive git://github.com/skysploit/simple-ducky.git /usr/share/simple-ducky
- - ln -sf /usr/share/simple-ducky/simple-ducky.sh /usr/bin/simple-ducky
+ - bash /usr/share/simple-ducky/install.sh
  - Once installed run the simple-ducky by typing: simple-ducky
  
 Note 1: Be sure to run option 9 "Dependency Checker" prior to running any other functions.
@@ -27,6 +27,10 @@ Note 1: Be sure to run option 9 "Dependency Checker" prior to running any other 
 Note 2: If you have prior installs (v1.1.0 or prior) issue this command:
  - rm -rf /usr/share/ducky
  
+## Updating
+To keep simple-ducky and all its modules updated:
+ - On Debian-based distros: run simple-ducky-update from the command prompt
+ - On Windows-based systems: run the included update.bat
 
 ## Change Log
 
