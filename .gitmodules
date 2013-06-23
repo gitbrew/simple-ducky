@@ -1,0 +1,3 @@
+[submodule "misc/dbd"]
+	path = misc/dbd
+	url = git@github.com:gitdurandal/dbd.git
